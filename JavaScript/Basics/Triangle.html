@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Triangle</title>
+</head>
+<body>
+   <!--If All the sides are known to you in a triangle-->
+   <input type="text" id="one">Enter a side of a triangle
+    <br>
+    <br>
+   <input type="text" id="two">Enter a side of a triangle
+    <br>
+    <br>
+   <input type="text" id="three">Enter a side of a triangle
+   <br>
+   <br>
+   <br>
+   <button type="submit" onclick="result()">Result</button>
+   <h1 id="Result"></h1>
+</body>
+<script>
+    function result()
+    {
+        let a=parseInt(document.getElementById("one").value);
+        let b=parseInt(document.getElementById("two").value);
+        let c=parseInt(document.getElementById("three").value);
+        console.log(a+" "+b+" "+c+" "+typeof a);
+        const s = (a + b+ c) / 2;
+
+//calculate the area
+const area = Math.sqrt(
+  s * (s - a) * (s - b) * (s - c)
+);
+        document.getElementById("Result").innerHTML=area;
+    }
+</script>
+</html>

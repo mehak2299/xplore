@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Triangle</title>
+</head>
+<body>
+   <!--If All the sides are known to you in a triangle-->
+    Enter first value<input type="text" id="one">
+    <br>
+    <br>
+    Enter second value<input type="text" id="two">
+    <br>
+    <br>
+    Enter nos end value<input type="text" id="three">
+   <br>
+   <br>
+   <br>
+   <button type="submit" onclick="result()">Result</button>
+   <h1 id="Result"></h1>
+</body>
+<script>
+    function result()
+    {
+        let a=parseInt(document.getElementById("one").value);
+        let b=parseInt(document.getElementById("two").value);
+        let end=parseInt(document.getElementById("three").value);
+        let ul=document.createElement('ul');
+        let li=document.createElement('li');
+        li.innerText=a;
+        ul.appendChild(li);
+        document.getElementById('Result').appendChild(ul);
+        let val=document.createElement('li');
+        val.innerText=b;
+        ul.appendChild(val);
+        for(let i=1;i<=end-2;i++)
+        {
+         c=a+b;
+         a=b;
+         b=c;
+         let last=document.createElement('li');
+         last.innerText=c;
+         ul.appendChild(last);
+        }
+    }
+</script>
+</html>

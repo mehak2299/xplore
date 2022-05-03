@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Swapping Examples</title>
+</head>
+
+<body>
+    Enter nos<input type="text" id="two">
+    <br>
+    <br>
+    Enter nos<input type="text" id="three">
+    <br>
+    <br>
+    <br>
+    <button type="submit" onclick="result(parseInt(document.getElementById('two').value),
+  parseInt(document.getElementById('three').value))">Result</button>
+    <p id="before"></p>
+    <p id="one"></p>
+    <!--Using Bitwise XOR operator-->
+    <button type="submit" onclick="XOR(parseInt(document.getElementById('two').value),
+    parseInt(document.getElementById('three').value))">Result</button>
+     <p id="befores"></p>
+     <p id="ones"></p>
+</body>
+<script>
+       function result(a,b)
+       {
+        document.getElementById("before").innerHTML="Before Swapping : "+a+" "+b;
+           //Destructing Assignment
+           [a,b]=[b,a];
+           document.getElementById("one").innerHTML="After Swapping : "+a+" "+b;
+
+       }
+       function XOR(a,b)
+       {
+        document.getElementById("befores").innerHTML="Before Swapping : "+a+" "+b;
+        a=a^b;
+        b=a^b;
+        a=a^b;
+        document.getElementById("ones").innerHTML="After Swapping : "+a+" "+b;
+
+       }
+</script>
+
+</html>

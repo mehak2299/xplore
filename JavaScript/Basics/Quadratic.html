@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>Quadratic Equation</title>
+</head>
+<body>
+  Enter a <input type="text" id="a">
+  <br>
+  <br>
+  Enter b <input type="text" id="b">
+  <br>
+  <br>
+  Enter c <input type="text" id="c">
+  <br>
+  <br>
+  <p id="result"></p>
+  <button type="submit" onclick="first(parseInt(document.getElementById('a').value),parseInt(document.getElementById('b').value),parseInt(document.getElementById('c').value))"></button>
+</body>
+<script>
+    function first(a,b,c)
+    {
+        let root1,root2,img,real;
+        let d=(b*b)-(4*a*c);
+  
+        if(d>0)
+        {
+          root1=(-b+Math.sqrt(d))/(2*a);
+          root2=(-b-Math.sqrt(d))/(2*a)
+          document.getElementById('result').innerHTML=`The roots of quadratic equations are ${root1} ${root2}`;
+        }
+        else if(d==0)
+        {
+            root1=root2=-b/(2*a);
+            document.getElementById('result').innerHTML=`The roots of quadratic equations are ${root1} ${root2}`;
+        }
+        else{
+            real=-b/(2*a).toFixed(2);
+           img=Math.sqrt(-d/2*a).toFixed(2);
+           document.getElementById('result').innerHTML=`The roots of quadratic equations are ${real} +  ${img} i  ${real} - ${img} i`;
+        }
+    }
+</script>
+</html>

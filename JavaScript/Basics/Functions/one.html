@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Add</title>
+</head>
+<body>
+    <h1 id="one"></h1>
+    <button id="btn">Simple</button>
+    <button id="btn1">Date</button>
+</body>
+<script>
+   document.getElementById('btn').addEventListener("click",show);
+  function show()
+  {
+      document.getElementById('one').innerHTML="hello";
+  }
+  function show1()
+  {
+      document.getElementById('one').innerHTML=Date();
+  }
+  document.getElementById('btn1').addEventListener("click",show1);
+</script>
+</html>

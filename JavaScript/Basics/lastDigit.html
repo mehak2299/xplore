@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Last Digit</title>
+</head>
+<body>
+    Enter a nos<input type="text" id="one">
+    Enter a nos<input type="text" id="two">
+    Enter a nos<input type="text" id="three">
+    <button type="submit" onclick="res(parseInt(document.getElementById('one').value),parseInt(document.getElementById('two').value),parseInt(document.getElementById('three').value))">Result</button>
+    <p id="result"></p>
+</body>
+<script>
+    function res(a,b,c)
+    {
+        let lastA=a%10;
+        let lastB=b%10;
+        let lastC=c%10;
+        if(lastA==lastB&&lastB==lastC)
+        {
+            document.getElementById('result').innerHTML="The last digit of all the three nos are same";
+        }
+        else
+        {
+            document.getElementById('result').innerHTML="The last digit of all the three nos are  not same"; 
+        }
+    }
+    
+</script>
+</html>
